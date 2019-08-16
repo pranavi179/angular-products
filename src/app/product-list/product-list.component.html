@@ -1,0 +1,58 @@
+<!-- <h2>Products</h2>
+<h2>Products</h2>
+
+<div *ngFor="let product of products; index as productId">
+  <h3>
+    <a [title]="product.name + 'details '" [routerLink]="['/products',productId]" >
+    {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <button (click) = "share()">
+    SHARE
+  </button>
+  <app-product-alerts [product]= "product"
+  (notify) = "onNotify()">
+  </app-product-alerts>
+  
+</div>
+
+-->
+<div *ngFor="let product of products; index as productId">
+
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card white lighten-1">
+      
+        <div class="card-content black-text">
+         <h3>
+    <a [title]="product.name + 'details '" [routerLink]="['/products',productId]" >
+    {{ product.name }}
+    </a>
+  </h3>
+         <!-- <span class="card-title">Card Title</span> -->
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+
+  <button (click) = "share()">
+    SHARE
+  </button>
+  <app-product-alerts [product]= "product"
+  (notify) = "onNotify()">
+  </app-product-alerts>
+      <!--  <div class="card-action">
+          <a href="#">This is a link</a>
+          <a href="#">This is a link</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
